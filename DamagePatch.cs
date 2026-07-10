@@ -64,7 +64,11 @@ namespace DeathCounterRecounted
             victim = character?.DisplayName;
             if (info.Type != null) causeOfDeath = info.Type.String;
             var attackingIdentity = MySession.Static.Players.TryGetIdentity(info.AttackerId);
-            bool isSuicide = causeOfDeath.Equals("suicide", StringComparison.OrdinalIgnoreCase) && attackingIdentity != null;
+
+            // now removing suicide from death streak means pressing backspace wont increase ur death streak.
+
+            bool isSuicide = causeOfDeath.Equals("suicide", StringComparison.OrdinalIgnoreCase);
+
             var playerId = new MyPlayer.PlayerId(steamId);
             MyPlayer player = MySession.Static.Players.GetPlayerById(playerId);
 

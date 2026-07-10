@@ -65,6 +65,7 @@
     </Reference>
     <Reference Include="VRage.Network">
       <HintPath>..\GameBinaries\VRage.Network.dll</HintPath>
+      <Private>true</Private>
     </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
@@ -85,8 +86,12 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup>
-    <None Include=".editorconfig" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <ItemGroup>
+        <Content Include="$(ProjectDir)\manifest.xml" CopyToOutputDirectory="PreserveNewest" />
+    </ItemGroup>
+    <Target Name="Zip" BeforeTargets="AfterBuild">
+        <MakeDir Directories="$(SolutionDir)\Build\" />
+        <ZipDirectory SourceDirectory="$(OutputPath)" DestinationFile="$(SolutionDir)\Build\$(MSBuildProjectName).zip" Overwrite="true" />
+    </Target>
 </Project>

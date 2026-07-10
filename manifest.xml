@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<PluginManifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>DeathCounterRecounted</Name>
+  <Guid>BF66F2A3-0A9E-451E-B3C8-3286DBD5BBAB</Guid>
+  <Repository>DeathCounterRecounted</Repository>
+  <Version>v2.2.2.1</Version>
+</PluginManifest>
