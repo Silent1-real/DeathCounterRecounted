@@ -99,7 +99,7 @@ namespace DeathCounterRecounted
                         break;
                     case MyVoxelBase _:
 
-                        // Don't treat these as voxel collisions
+                        // exceptoion damages causes.
                         if (causeOfDeath.Equals("Explosion", StringComparison.OrdinalIgnoreCase))
                             break;
 
