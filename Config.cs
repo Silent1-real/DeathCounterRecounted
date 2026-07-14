@@ -127,7 +127,8 @@ namespace DeathCounterRecounted
             set => SetValue(ref _creaturemessages, value);
         }
         private List<string> _deathstreakmessages;
-        [Display(Order = 21, Name = "Death Streak Messages",Description ="Random Messages for when players die 5 in row")]
+        [Display(Order = 21, Name = "Death Streak Messages",Description =
+            "Random Messages for when players die 5 in row the Keyword COUNT is used to place number of death happend to player which you can use it depending to your message")]
         public List<string> DeathStreakMessages
         {
             get => _deathstreakmessages;
@@ -154,16 +155,16 @@ namespace DeathCounterRecounted
             cfg.CreatureDeathMessages = new List<string>() { "eaten alive", "became wild life food", "became animals poop", "was ripped apart by an angry animal" };
             cfg.DeathStreakMessages = new List<string>()
     {
-        "{PLAYER} has died {COUNT} times in a row! a true noob",
-        "{PLAYER} is conducting intensive respawn testing ({COUNT} deaths).",
-        "{PLAYER} has become best friends with the medical room ({COUNT} deaths).",
-        "{PLAYER} is speedrunning the afterlife ({COUNT} deaths).",
-        "{PLAYER} has become a frequent flyer of the respawn screen ({COUNT} deaths).",
-        "{PLAYER} has been promoted to Senior Test Pilot ({COUNT} deaths).",
-        "{PLAYER} is farming death statistics ({COUNT} deaths).",
-        "{PLAYER} is roleplaying as a disposable drone ({COUNT} deaths)",
-        "{PLAYER} is gathering valuable data on what not to do ({COUNT} deaths).",
-        "{PLAYER} experiencing PvE tragedy ({COUNT} deaths)." 
+        " has died COUNT times in a row! a true noob",
+        " is conducting intensive respawn testing (COUNT deaths).",
+        " has become best friends with the medical room (COUNT deaths).",
+        " is speedrunning the afterlife (COUNT deaths).",
+        " has become a frequent flyer of the respawn screen (COUNT deaths).",
+        " has been promoted to Senior Test Pilot (COUNT deaths).",
+        " is farming death statistics (COUNT deaths).",
+        " is roleplaying as a disposable drone (COUNT deaths)",
+        " is gathering valuable data on what not to do (COUNT deaths).",
+        " experiencing PvE tragedy (COUNT deaths)." 
     };
         
             return cfg;

@@ -87,9 +87,8 @@ namespace DeathCounterRecounted
                 {
                     var msg = Config.DeathStreakMessages[
                         Random.Next(Config.DeathStreakMessages.Count)];
-
-                    msg = msg.Replace("{PLAYER}", character.DisplayName)
-                             .Replace("{COUNT}", currentDeathStreak.ToString());
+                    msg = $"{character.DisplayName} {msg}";
+                    msg = msg.Replace("COUNT", currentDeathStreak.ToString());
 
                     MyVisualScriptLogicProvider.SendChatMessage(msg);
                 }
